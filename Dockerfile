@@ -7,7 +7,7 @@ RUN npm cache clean --force
 RUN npm i -g @angular/cli@latest
 RUN npm i --force  
 
-RUN ng build --prod --base-href /live-agent-panel/
+RUN ng build --prod --base-href /
 
 FROM nginx:alpine
 COPY --from=node /app/dist/live-agent-panel   /usr/share/nginx/html
